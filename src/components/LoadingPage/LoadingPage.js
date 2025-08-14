@@ -16,7 +16,7 @@ const LoadingPage = () => {
           <div className="spinner"></div>
           <div className="brand-name">SHAPE ALUMINIUM</div>
         </div>
-        <h2 className="loading-text">Loading...</h2>
+        <h2 className="loading-text">Loading...Please Wait</h2>
       </div>
     </>
   );
