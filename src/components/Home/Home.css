@@ -1,0 +1,20 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+.home-content {
+  flex: 1;
+  isolation: isolate;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+}

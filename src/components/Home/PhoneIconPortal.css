@@ -1,0 +1,105 @@
+.phone-icon-portal-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.phone-icon-portal-icon {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  padding: 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 15px rgba(0, 114, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 56px;
+  height: 56px;
+}
+
+.phone-icon-portal-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 114, 255, 0.5);
+}
+
+.phone-icon-portal-number {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  bottom: -8px;
+  right: 18px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid white;
+}
+
+.phone-icon-portal-number.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.phone-text {
+  text-decoration: none;
+  color: #0072ff;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pulse {
+  animation: pulseAnim 2s infinite;
+}
+
+@keyframes pulseAnim {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 114, 255, 0.5);
+  }
+
+  70% {
+    box-shadow: 0 0 0 15px rgba(0, 114, 255, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 114, 255, 0);
+  }
+}
+
+@media (max-width: 480px) {
+  .phone-icon-portal-container {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .phone-icon-portal-icon {
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+  }
+
+  .phone-icon-portal-number {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}

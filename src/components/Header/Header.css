@@ -1,0 +1,406 @@
+.my-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+  width: 95%;
+}
+
+.logo {
+  font-family: 'EB Garamond', serif;
+  text-align: center;
+  color: rgba(33, 61, 131);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+}
+
+.aum {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.enterprises {
+  font-size: 20px;
+}
+
+.sub-logo {
+  font-size: 14px;
+  color: gray;
+  text-transform: lowercase;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-icon {
+  cursor: pointer;
+  font-size: 20px;
+  transition: transform 0.3s;
+  color: rgb(0, 0, 0);
+}
+
+.search-icon:hover {
+  transform: scale(1.1);
+  color: #f4b400;
+}
+
+.search-container {
+  position: absolute;
+  top: 50px;
+  right: 80px;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.search-input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    width: 100%;
+    top: 60px;
+    right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-menu .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    max-height: 300px;
+    overflow-y: auto;
+    width: 100%;
+  }
+  
+  .nav {
+    max-height: 100vh; 
+    overflow-y: auto;
+  }
+}
+
+
+.search-results-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.search-results {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.search-results li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-results li:hover {
+  background: #f4b400;
+  color: white;
+}
+
+.login-btn {
+  padding: 8px 15px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .my-header {
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    z-index: 999;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 12px;
+    text-align: center;
+    display: block;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 10px;
+  }
+
+  .menu-toggle .search-icon {
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+  }
+
+  .search-container {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 80%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 99999;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .search-results-container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: block;
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .my-header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 50%;
+    height: auto;
+    background-color: white;
+    max-height: 200vh;
+    flex-direction: column;
+    padding: 10px 0;
+    z-index: 999;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 12px;
+    text-align: center;
+  }
+
+  .products-menu {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+
+  .products-menu .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+  }
+
+  .menu-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 12px;
+    font-weight: bold;
+  }
+
+  .header-actions {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 10px;
+    gap: 15px;
+  }
+
+  .search-container {
+    position: absolute;
+    top: 110px;
+    right: 20px;
+    width: 90%;
+    max-width: 300px;
+    z-index: 999;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .aum {
+    font-size: 24px;
+  }
+
+  .enterprises {
+    font-size: 14px;
+  }
+
+  .search-container {
+    position: absolute;
+    top: 110px;
+    right: 20px;
+    width: 90%;
+    max-width: 300px;
+    z-index: 999;
+  }
+
+  .search-input {
+    width: 95%;
+  }
+}
+
+.products-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.chevron {
+  font-size: 13px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.chevron.rotate {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .products-menu .submenu {
+    position: static;
+    display: block;
+    width: 100%;
+    max-height: none;
+    overflow: visible;
+    box-shadow: none;
+    z-index: 9999;
+  }
+
+  .nav.open .products-menu .submenu {
+    display: block;
+  }
+}
+.products-wrapper {
+  position: relative;
+  display: inline-block;
+}

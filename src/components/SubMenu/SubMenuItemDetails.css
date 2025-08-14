@@ -1,0 +1,255 @@
+.submenu-product-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.submenu-image-section {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submenu-image-scroll {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+.submenu-image-wrapper {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.submenu-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.submenu-product-details {
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.submenu-product-details h1 {
+  margin-top: 20px;
+  text-align: left;
+  font-family: 'Georgia', serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0d47a1;
+}
+
+.submenu-product-details h3 {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #292828;
+}
+
+.submenu-product-extra {
+  margin-top: 20px;
+  padding-left: 20px;
+  font-size: 1rem;
+  color: #444;
+  list-style-type: disc;
+}
+
+.submenu-product-extra p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.submenu-product-extra li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.submenu-back-button-a {
+  background-color: transparent;
+  padding-top: 30px;
+  border: none;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submenu-back-button-a svg {
+  margin-right: 5px;
+}
+
+.submenu-back-button-a:hover {
+  text-decoration: underline;
+}
+
+.submenu-contact-button1 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 15px;
+  background-color: #d32f2f;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  gap: 8px;
+  color: white;
+  transition: background 0.3s ease-in-out;
+}
+
+.submenu-contact-button1:hover {
+  background-color: #b71c1c;
+}
+
+.scroll-arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  color: #333;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-arrow:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-arrow.left {
+  left: 10px;
+}
+
+.scroll-arrow.right {
+  right: 10px;
+
+}
+
+@media (max-width: 1024px) {
+  .submenu-product-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .submenu-image-scroll,
+  .submenu-product-details {
+    max-height: none;
+    flex: unset;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .submenu-product-container {
+    padding: 0 10px;
+    overflow-x: hidden;
+  }
+
+  .submenu-product-details h1 {
+    font-size: 1.5rem;
+  }
+
+  .submenu-product-details h3 {
+    font-size: 1rem;
+  }
+
+  .submenu-product-extra {
+    font-size: 0.95rem;
+    padding-left: 15px;
+  }
+
+  .submenu-back-button-a {
+    font-size: 14px;
+  }
+
+  .submenu-contact-button1 {
+    width: fit-content;
+    margin: 20px auto;
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+
+  .submenu-product-container ul {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .submenu-image-scroll {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .submenu-image-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .submenu-image-wrapper {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    padding: 0 5px;
+    box-sizing: border-box;
+  }
+
+  .submenu-image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 6px;
+  }
+
+  .scroll-arrow {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .submenu-product-details {
+    padding: 20px 15px;
+  }
+
+  .submenu-product-extra p {
+    font-size: 0.9rem;
+  }
+
+  .submenu-contact-button1 {
+    padding: 10px 16px;
+    font-size: 14px;
+    margin: 16px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .submenu-back-button-a {
+    display: none;
+  }
+}
