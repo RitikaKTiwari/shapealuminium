@@ -3,8 +3,8 @@ import { Helmet } from "react-helmet";
 import { FaArrowLeft, FaPhoneAlt, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "./SubMenuItemDetails.css";
 import glasspart1 from "../Images/Glass-partition-3.jpg";
-import glasspart2 from "../Images/Glass-partition-4.jpg";
-import glasspart3 from "../Images/Glass-partition-1.jpg";
+import glasspart2 from "../Images/Glass-partition-8.jpg";
+import glasspart3 from "../Images/Glass-partition-7.jpg";
 import shutter1 from "../Images/aluminium-shutter-profile-1.jpg";
 import shutter2 from "../Images/aluminium-shutter-profile-9.jpg";
 import shutter3 from "../Images/aluminium-shutter-profile-2.jpg";
@@ -125,16 +125,16 @@ const SubMenuItemsDetails = ({ productName, changePage }) => {
   return (
     <div className="submenu-product-container">
       <Helmet>
-        <title>{product.title} | AUM Enterprises</title>
+        <title>{product.title} | Shape Aluminium</title>
         <meta
           name="description"
-          content={`Explore details about ${product.title} at AUM Enterprises. ${product.description}`}
+          content={`Explore details about ${product.title} at Shape Aluminium. ${product.description}`}
         />
         <meta
           name="keywords"
           content={`${product.title}, AUM Enterprises, Packaging Materials, Specialty Papers`}
         />
-        <meta property="og:title" content={`${product.title} | AUM Enterprises`} />
+        <meta property="og:title" content={`${product.title} | Shape Aluminium`} />
         <meta
           property="og:description"
           content={`Learn more about ${product.title} – ${product.description}`}

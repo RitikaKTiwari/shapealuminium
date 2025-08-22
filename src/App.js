@@ -82,8 +82,8 @@ function App() {
       <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
-        <title>AUM ENTERPRISES</title>
-        <meta name="description" content="Premium paper and Boards products by AUM ENTERPRISES." />
+        <title>SHAPE ALUMINIUM</title>
+        <meta name="description" content="Premium aluminium products by SHAPE ALUMINIUM." />
       </Helmet>
       {isLoading ? (
         <LoadingPage />

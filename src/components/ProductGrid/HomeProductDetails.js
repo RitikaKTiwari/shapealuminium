@@ -5,7 +5,7 @@ import shutter from "../Images/aluminium-shutter-profile-1.jpg";
 import handle68 from "../Images/68mm-handle-profile-2.jpg";
 import frame45 from "../Images/45mm-frame-profile-4.jpg";
 import gprofile from "../Images/G-profile-1.jpg";
-import glass from "../Images/Glass-partition-6.jpg";
+import glass from "../Images/Glass-partition-9.png";
 
 const products = {
     "shutter-profile": {
